@@ -1,11 +1,11 @@
 package com.example.offlinecachesystem.presentation.navigation
 
-
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.offlinecachesystem.presentation.screens.HomeScreen
+import com.example.offlinecachesystem.presentation.screens.home.HomeRoute
+import com.example.offlinecachesystem.presentation.screens.home.HomeScreen
 
 @Composable
 fun AppNavGraph(
@@ -16,7 +16,7 @@ fun AppNavGraph(
         startDestination = AppScreens.Home.route
     ){
         composable(AppScreens.Home.route) {
-            HomeScreen(navController)
+            HomeRoute(navController)
         }
 
        /* composable(
