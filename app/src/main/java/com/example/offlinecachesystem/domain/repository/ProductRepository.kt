@@ -5,5 +5,7 @@ import com.example.offlinecachesystem.domain.model.Product
 import kotlinx.coroutines.flow.Flow
 
 interface ProductRepository {
-     fun getProducts(): Flow<NetworkResult<List<Product>>>
+      fun getProducts(): Flow<List<Product>>
+
+     suspend fun syncProducts(): NetworkResult<Unit>
 }

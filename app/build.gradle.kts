@@ -40,6 +40,9 @@ android {
     buildFeatures {
         compose = true
     }
+    testOptions {
+       unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -83,5 +86,11 @@ dependencies {
 
     // coil
     implementation(libs.coil.compose)
+
+    // library to write testcases
+    testImplementation("io.mockk:mockk:1.14.11")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    testImplementation("app.cash.turbine:turbine:1.2.1")  // For flow testing
 
 }
